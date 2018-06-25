@@ -1,0 +1,33 @@
+$u-base : $unit * 9
+
+.header-search
+  flex : 1
+  display : flex
+  .clear
+    width : $u-base
+    height : $u-base
+    display : flex
+    justify-content : center
+    align-items : center
+    background : $color-base03
+    color : $color-base1
+    i
+      font-size : $h2
+    &:hover
+      background : rgba( $color-base01, 0.2 )
+      color : $color-base3
+      cursor : pointer
+  input
+    flex : 1
+    line-height : $u-base
+    font-size : $unit * 4
+    border : 0
+    text-transform : uppercase
+    background : none
+    margin : 0 $unit * 2
+    color : $color-base2
+    &::placeholder
+      color : $color-base3
+      opacity : 1
+
+

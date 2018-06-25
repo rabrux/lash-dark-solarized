@@ -1,0 +1,21 @@
+.is-row
+  display : flex
+  .is-half
+    flex : 0.5
+  .is-one
+    flex : 1
+  .is-two
+    flex : 2
+  .is-three
+    flex : 3
+  .is-four
+    flex : 4
+  .is-five
+    flex : 5
+  & > [class*=is-]
+    & + [class*=is-]
+      margin-left : $unit * 2
+    
+  &:last-child
+    margin-bottom : $unit * 2
+

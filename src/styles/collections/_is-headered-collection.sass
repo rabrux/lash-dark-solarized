@@ -1,0 +1,55 @@
+$offset : $unit * 6
+
+.is-headered-collection
+  display : flex
+  flex-direction : column
+  header,
+  section > .item
+    display : flex
+    min-height : $unit * 6
+    font-size : $unit * 3
+    justify-content : center
+    align-items : center
+    & > [class*=is-]
+      padding : $unit $unit * 2
+    .is-centered
+      text-align : center
+
+    .actions
+      display : flex
+      height : $offset
+      .action
+        width : $offset
+        display : flex
+        justify-content : center
+        align-items : center
+        &:hover
+          cursor : pointer
+      // offset
+      &[class*=is-offset],
+      [class*=is-offset]
+        padding : 0
+        margin-left : $offset
+        &.is-offset-2x
+          margin-left : $offset * 2
+        &.is-offset-3x
+          margin-left : $offset * 3
+        &.is-offset-4x
+          margin-left : $offset * 4
+        &.is-offset-5x
+          margin-left : $offset * 5
+        &.is-offset-6x
+          margin-left : $offset * 6
+        &.is-offset-7x
+          margin-left : $offset * 7
+
+  & > header
+    font-weight : 500
+
+  & > section
+    .item
+      &:nth-child( odd )
+        background : $color-list-even
+      &:hover
+        background : $color-list-hover
+

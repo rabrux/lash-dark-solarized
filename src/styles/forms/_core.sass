@@ -1,0 +1,38 @@
+// row
+.is-row
+  & + .is-row
+    margin-top : $unit * 2
+
+  h1
+    font-size : $unit * 4.9
+    flex : 1
+    border-bottom : 1px solid $color-base00
+    padding-bottom : $unit / 2
+  h2
+    font-size : $unit * 3.5
+
+//- field
+.field
+  display : flex
+  flex-direction : column
+  label
+    font-size : $unit * 3
+    padding-bottom : $unit
+
+// inputs base
+input,
+textarea,
+select,
+.is-button
+  background : $color-main-content
+  border : 1px solid $color-input-border
+  color : $color-base3
+  font-size : $unit * 3
+  line-height : $unit * 6
+  padding : 0 $unit * 2
+  width : 100%
+  &::placeholder
+    color : $color-base2
+  &:disabled
+    cursor : not-allowed
+

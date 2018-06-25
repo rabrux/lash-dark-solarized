@@ -1,0 +1,27 @@
+.is-checkbox
+  display : flex
+  cursor : pointer
+  input
+    display : none
+    &:checked
+      & + span
+        &:before
+          content : "\f374"
+    &:disabled
+      cursor : not-allowed
+      & + span
+        cursor : not-allowed
+
+  span
+    flex : 1
+    line-height : $unit * 6
+    padding-left : $unit * 2
+    display : flex
+    &:before
+      display : inline-block
+      font-family : "Ionicons"
+      content : "\f372"
+      font-size : $unit * 4
+      margin-right : $unit * 2
+
+

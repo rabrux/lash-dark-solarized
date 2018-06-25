@@ -1,0 +1,51 @@
+$u-base : $unit * 9
+
+aside.lash
+  background : $color-base03
+  width : $u-base
+  display : flex
+  flex-direction : column
+  nav,
+  footer
+    ul
+      li
+        height : $u-base
+        &.icon
+          display : flex
+          justify-content : center
+          align-items : center
+          i
+            font-size : $h2
+            color : $color-base1
+          &.is-home
+            background : $color-yellow
+            i
+              color : $color-base3
+        &:hover
+          background : $color-yellow
+          cursor : pointer
+          &.icon
+            i
+              color : $color-base3
+  nav
+    flex : 1
+  footer
+    ul
+      li.profile
+        width : $u-base
+        height : $u-base
+        display : flex
+        justify-content : center
+        align-items : center
+        .caption
+          width : $u-base * 0.7
+          height : $u-base * 0.7
+          border-radius : 50%
+          text-align : center
+          line-height : $u-base * 0.7
+          color : $color-base2
+          font-size : $unit * 3.5
+          font-weight : 500
+        &:hover
+          background : transparent
+

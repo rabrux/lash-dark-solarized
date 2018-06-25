@@ -1,0 +1,32 @@
+$u-base : $unit * 8
+
+.is-window-pane
+  & > header
+    height : $u-base
+    background : $color-base03
+    display : flex
+    align-items : center
+    h1
+      flex : 1
+      padding : 0 $unit * 2
+      font-size : $unit * 4
+    .actions
+      display : flex
+      .action
+        background : $color-base03
+        color : $color-base1
+        display : flex
+        justify-content : center
+        align-items : center
+        font-size : $unit * 6
+        width : $u-base
+        height : $u-base
+        &:hover
+          background : rgba( $color-base01, 0.2 )
+          color : $color-base3
+          cursor : pointer
+
+  & > section
+    background : $color-card
+    padding : $unit * 2
+

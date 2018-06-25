@@ -1,0 +1,46 @@
+html( lang="en" )
+  head
+    meta( charset="utf-8" )
+    meta( name="vieport" content="width=device-width, initial-scale=1" )
+    link( rel="stylesheet" href="../dist/css/solarized.min.css" )
+
+  body
+
+    .wrap
+      .centered-layout
+        .content
+          .is-brand-layout
+            header
+              img( src="../assets/dif.png" )
+              h1 Sistema Nacional para el Desarrollo Integral de la Familia
+            section
+              form
+                .is-row
+                  .is-one
+                    .field
+                      .action-input
+                        .icon
+                          i.ion-android-person
+                        input(
+                          type="text"
+                          placeholder="username"
+                        )
+
+                .is-row
+                  .is-one
+                    .field
+                      .action-input
+                        .icon
+                          i.ion-key
+                        input(
+                          type="text"
+                          placeholder="password"
+                        )
+
+                .is-row
+                  .is-one
+                    button.is-button.is-primary Login
+
+          //- footer
+            p lorem
+

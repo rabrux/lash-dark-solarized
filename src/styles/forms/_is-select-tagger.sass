@@ -1,0 +1,51 @@
+.is-select-tagger
+  background : $color-main-content
+  padding : $unit
+  display : flex
+  .tags
+    display : flex
+    flex-wrap : wrap
+    .tag
+      background : $color-base03
+      display : flex
+      align-items : center
+      //margin : 0 $unit $unit 0
+      height : $unit * 5
+      label
+        padding : 0 $unit * 2
+        line-height : $unit * 5
+      .remove
+        background : $color-base02
+        width : $unit * 5
+        height : $unit * 5
+        font-size : $unit * 3.5
+        display : flex
+        justify-content : center
+        align-items : center
+        cursor : pointer
+        &:hover
+          background : rgba( $color-red, 0.8 )
+
+      & + .tag
+        margin-left : $unit * 2
+
+  .select-wrap
+    position : relative
+    margin-left : $unit * 2
+    background : $color-base02
+    select
+      appearance : none
+      height : $unit * 5
+      padding : 0 $unit * 5 0 $unit
+      background : transparent
+      &:hover,
+      &:active
+        outline : none
+    &:after
+      position : absolute
+      content : "\f2c7"
+      font-family : "Ionicons"
+      top : 9px
+      right : 9px
+      opacity : 0.8
+

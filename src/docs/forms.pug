@@ -1,0 +1,446 @@
+html( lang="en" )
+  head
+    meta( charset="utf-8" )
+    meta( name="vieport" content="width=device-width, initial-scale=1" )
+    link( rel="stylesheet" href="../dist/css/solarized.min.css" )
+
+  body
+
+    .wrap
+      .left-aside-layout
+        aside.lash
+          nav
+            ul
+              li.icon.is-home
+                i.ion-home
+          footer
+            ul
+              li.icon
+                i.ion-log-out
+              li.profile
+                  .caption.is-bg-greensea SA
+        section.sp.headered-content
+          header
+            h1 Formularios
+            .actions
+              .action( title="Guardar" )
+                i.ion-android-done
+              .action( title="Cancelar" )
+                i.ion-android-close
+          section.sp-1.sp
+            .sp-1.boxem-2x.card
+              form
+
+                // buttons
+                .is-row
+                  .is-one
+                    h1 Buttons
+                .is-row
+                  .is-one
+                    .is-row
+                      h2 By background color
+                    .is-row
+                      .is-one
+                        button.is-button.is-bg-yellow .is-bg-yellow
+
+                    .is-row
+                      .is-one
+                        button.is-button.is-bg-orange .is-bg-orange
+
+                    .is-row
+                      .is-one
+                        button.is-button.is-bg-red .is-bg-red
+
+                    .is-row
+                      .is-one
+                        button.is-button.is-bg-magenta .is-bg-magenta
+
+                    .is-row
+                      .is-one
+                        button.is-button.is-bg-violet .is-bg-violet
+
+                    .is-row
+                      .is-one
+                        button.is-button.is-bg-blue .is-bg-blue
+
+                    .is-row
+                      .is-one
+                        button.is-button.is-bg-cyan .is-bg-cyan
+
+                    .is-row
+                      .is-one
+                        button.is-button.is-bg-green .is-bg-green
+
+                  .is-one
+                    .is-row
+                      h2 By purpose
+                    .is-row
+                      .is-one
+                        button.is-button.is-primary .is-primary
+
+                    .is-row
+                      .is-one
+                        button.is-button.is-success .is-success
+
+                    .is-row
+                      .is-one
+                        button.is-button.is-danger .is-danger
+
+                    .is-row
+                      .is-one
+                        button.is-button.is-warning .is-warning
+
+                    .is-row
+                      .is-one
+                        button.is-button.is-info .is-info
+
+                    .is-row
+                      .is-one
+                        button.is-button.is-light .is-light
+
+                  .is-one
+                    .is-row
+                      h2 By border color
+                    .is-row
+                      .is-one
+                        button.is-button.is-line-yellow .is-line-yellow
+
+                    .is-row
+                      .is-one
+                        button.is-button.is-line-orange .is-line-orange
+
+                    .is-row
+                      .is-one
+                        button.is-button.is-line-red .is-line-red
+
+                    .is-row
+                      .is-one
+                        button.is-button.is-line-magenta .is-line-magenta
+
+                    .is-row
+                      .is-one
+                        button.is-button.is-line-violet .is-line-violet
+
+                    .is-row
+                      .is-one
+                        button.is-button.is-line-blue .is-line-blue
+
+                    .is-row
+                      .is-one
+                        button.is-button.is-line-cyan .is-line-cyan
+
+                    .is-row
+                      .is-one
+                        button.is-button.is-line-green .is-line-green
+
+                // end buttons
+
+                // basic inputs
+                .is-row
+                  h1 Inputs
+
+                .is-row
+                  h2 Text
+                .is-row
+                  .is-one
+                    .field
+                      label text
+                      input(
+                        type="text"
+                      )
+
+                  .is-one
+                    .field
+                      label text with placeholder
+                      input(
+                        type="text"
+                        placeholder="hello i am a placeholder"
+                      )
+
+                  .is-one
+                    .field
+                      label text disabled
+                      input(
+                        type="text"
+                        disabled
+                        value="disabled"
+                      )
+
+                .is-row
+                  h2 Textarea
+                .is-row
+                  .is-one
+                    .field
+                      label textarea
+                      textarea
+
+                .is-row
+                  h2 Dropdown
+                .is-row
+                  .is-one
+                    .field
+                      label dropdown
+                      select
+                        option( disabled selected value="" ) select an item
+                        option option one
+                        option option two
+
+                  .is-one
+                    .field
+                      label dropdown disabled
+                      select( disabled )
+                        option( disabled selected value="" ) select an item
+                        option option one
+                        option option two
+
+                .is-row
+                  h2 Number
+                .is-row
+                  .is-half
+                    .field
+                      label number
+                      input(
+                        type="number"
+                        size="1"
+                      )
+
+                  .is-one
+                    .field
+                      label number disabled
+                      input(
+                        type="number"
+                        size="1"
+                        value="12"
+                        disabled
+                      )
+
+                .is-row
+                  .is-one
+                    .is-row
+                      h2 checkbox
+                    .is-row
+                      .is-one
+                        .field
+                          label.is-checkbox
+                            input(
+                              type="checkbox"
+                              checked
+                            )
+                            span checked
+
+                    .is-row
+                      .is-one
+                        .field
+                          label.is-checkbox
+                            input(
+                              type="checkbox"
+                              disabled
+                            )
+                            span unchecked disabled
+
+                    .is-row
+                      .is-one
+                        .field
+                          label.is-checkbox
+                            input(
+                              type="checkbox"
+                              checked
+                              disabled
+                            )
+                            span checked disabled
+
+                  .is-one
+                    .is-row
+                      h2 radio button
+                    .is-row
+                      .is-one
+                        .field
+                          label.is-radio
+                            input(
+                              type="radio"
+                              name="radios"
+                              value="1"
+                              checked
+                            )
+                            span checked
+
+                    .is-row
+                      .is-one
+                        .field
+                          label.is-radio
+                            input(
+                              type="radio"
+                              name="radios2"
+                              value="2"
+                              disabled
+                            )
+                            span unchecked disabled
+
+                    .is-row
+                      .is-one
+                        .field
+                          label.is-radio
+                            input(
+                              type="radio"
+                              name="radios2"
+                              value="2"
+                              checked
+                              disabled
+                            )
+                            span checked disabled
+                // end basic inputs
+
+                // input with icons
+                .is-row
+                  h1 Icon and actions over inputs
+                .is-row
+                  .is-one
+                    .field
+                      label icon input
+                      .action-input
+                        .icon
+                          i.ion-android-person
+                        input(
+                          type="text"
+                        )
+
+                .is-row
+                  .is-one
+                    .field
+                      label action input
+                      .action-input
+                        input(
+                          type="text"
+                          placeholder="dd/mm/aaaa"
+                        )
+                        .action
+                          i.ion-android-calendar
+
+                .is-row
+                  .is-one
+                    .field
+                      label icon and action input
+                      .action-input
+                        .icon
+                          i.ion-android-person
+                        input(
+                          type="text"
+                        )
+                        .action
+                          i.ion-android-close
+
+                .is-row
+                  .is-one
+                    .field
+                      label process input
+                      .action-input
+                        .icon
+                          i.ion-android-person
+                        input(
+                          type="text"
+                        )
+                        .process
+                          i.ion-ios-circle-filled
+
+                .is-row
+                  .is-one
+                    .field
+                      label select icon
+                      .action-input
+                        .icon
+                          i.ion-clipboard
+                        select
+                          option( disabled selected value="" ) Selecciona g&eacute;nero
+                          option( value="MUJER" ) MUJER
+                          option( value="HOMBRE" ) HOMBRE
+
+                .is-row
+                  .is-one
+                    .field
+                      label select process
+                      .action-input
+                        select
+                          option( disabled selected value="" ) Selecciona g&eacute;nero
+                          option( value="MUJER" ) MUJER
+                          option( value="HOMBRE" ) HOMBRE
+                        .process
+                          i.ion-ios-circle-filled
+                // end input with icons
+
+                // custom inputs
+                .is-row
+                  h1 Custom inputs
+                .is-row
+                  .is-one
+                    .field
+                      label select tagger
+                      .is-select-tagger
+                        .tags
+                          .tag
+                            label lorem
+                            .remove
+                              i.ion-android-close
+                          .tag
+                            label ipsum
+                            .remove
+                              i.ion-android-close
+                        .select-wrap
+                          select
+                            option( selected disabled ) add tag
+                            option Blandit pellentesque.
+                            option Et mauris. 
+                            option A consectetuer.
+                // end custom inputs
+
+                // example
+                .is-row
+                  h1 Ejemplo
+                .is-row
+                  h2 Nombre completo
+                .is-row
+                  .is-one
+                    .field
+                      label Nombre (es)
+                      input(
+                        type="text"
+                      )
+
+                  .is-one
+                    .field
+                      label Apellido paterno
+                      input(
+                        type="text"
+                      )
+
+                  .is-one
+                    .field
+                      label Apellido materno
+                      input(
+                        type="text"
+                        placeholder="Apellido materno"
+                      )
+
+                .is-row
+                  .is-one
+                    .field
+                      label G&eacute;nero
+                      select
+                        option( disabled selected value="" ) Selecciona g&eacute;nero
+                        option( value="MUJER" ) MUJER
+                        option( value="HOMBRE" ) HOMBRE
+
+                  .is-one
+                    .field
+                      label Edad
+                      input(
+                        type="number"
+                        value="5"
+                        disabled
+                      )
+
+                .is-row
+                  .is-one
+                    .field
+                      label Bio
+                      textarea()
+
