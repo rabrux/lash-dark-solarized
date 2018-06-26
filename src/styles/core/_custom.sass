@@ -1,0 +1,42 @@
+// custom base
+body
+  font-family : 'Barlow Semi Condensed'
+  font-size : $font-size-base
+  font-weight : 400
+  color : $color-base2
+
+*
+  font-family : 'Barlow Semi Condensed'
+  &:focus
+    outline : none
+  &::placeholder
+    font-family : 'Barlow Semi Condensed'
+
+h1, h2, h3, h4, h5, h6
+  font-family : 'Barlow Semi Condensed'
+  font-weight : 500
+
+a
+  color : $color-base2
+  &:hover
+    color : $color-yellow
+
+p
+  & + p
+    margin-top : $unit * 2
+
+//- ::-webkit-scrollbar
+//-   width: 6px
+//-   height: 6px
+//- ::-webkit-scrollbar-track 
+//-   -webkit-box-shadow: inset 0 0 6px red
+//-   background: red
+//-   border-radius: 10px
+//-   border-radius: 0
+//-   margin: $unit 0
+//- ::-webkit-scrollbar-thumb
+//-   border-radius: 10px
+//-   -webkit-box-shadow: inset 0 0 6px blue
+//-   background: rgba( blue, .3 )
+//-   border-radius: 0
+

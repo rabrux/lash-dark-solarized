@@ -1,6 +1,6 @@
 {
   "name": "box-app-gui",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "webapp gui",
   "main": "index.js",
   "repository": "git@gitlab.dif.gob.mx:base/box-app-gui.git",
@@ -11,17 +11,16 @@
     "coffeescript": "^2.3.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.4",
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.5.0",
     "gulp-pug": "^4.0.1",
     "gulp-sass": "^4.0.1",
-    "gulp-watch": "^5.0.0",
-    "@bower_components/ionicons": "ionic-team/ionicons#2.0.1"
+    "gulp-watch": "^5.0.0"
   },
   "dependencies": {},
   "scripts": {
-    "postinstall": "node -e \"try { require('fs').symlinkSync(require('path').resolve('node_modules/@bower_components'), 'bower_components', 'junction') } catch (e) { }\"",
     "solarized": "PALETTE=solarized node_modules/.bin/gulp compile",
-    "dev": "node_modules/.bin/gulp dev"
+    "solarized-dev": "PALETTE=solarized node_modules/.bin/gulp dev"
   }
 }

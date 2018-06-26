@@ -1,10 +1,14 @@
 gulp    = require 'gulp'
 sass    = require 'gulp-sass'
+cssMin  = require 'gulp-clean-css'
 pug     = require 'gulp-pug'
 concat  = require 'gulp-concat'
 watch   = require 'gulp-watch'
 connect = require 'gulp-connect'
 prefix  = require 'gulp-autoprefixer'
+
+# environment variables
+prod = process.env.PROD || false
 
 # sources
 styles = [
@@ -14,10 +18,12 @@ styles = [
 ]
 
 fonts = [
-  # ionicons
-  'bower_components/ionicons/fonts/*.*'
   # app
-  'src/fonts/**/*.*'
+  'src/styles/fonts/**/*.eot'
+  'src/styles/fonts/**/*.woff2'
+  'src/styles/fonts/**/*.woff'
+  'src/styles/fonts/**/*.ttf'
+  'src/styles/fonts/**/*.svg'
 ]
 
 docs = [
@@ -28,13 +34,14 @@ docs = [
 gulp.task 'styles', ->
 
   gulp
-    .src "src/styles/config/#{ process.env.PALETTE }/index.sass"
+    .src "src/styles/palettes/#{ process.env.PALETTE }/index.sass"
     .pipe sass().on( 'error', sass.logError )
     .pipe prefix(
       browsers : [ 'last 5 versions' ]
       cascade : false
     )
-    .pipe concat 'solarized.min.css'
+    .pipe cssMin()
+    .pipe concat "#{ process.env.PALETTE }.min.css"
     .pipe gulp.dest 'dist/css'
 
 gulp.task 'docs', ->
@@ -48,21 +55,13 @@ gulp.task 'docs', ->
 # copy custom fonts
 gulp.task 'system-fonts', ->
   gulp
-    .src 'src/fonts/**/*.*'
+    .src fonts
     .pipe gulp.dest 'dist/fonts'
-
-  return
-
-gulp.task 'ionicons', ->
-  gulp
-    .src 'bower_components/ionicons/fonts/*.*'
-    .pipe gulp.dest 'dist/fonts/ionicons'
 
   return
 
 gulp.task 'fonts', [
   'system-fonts'
-  'ionicons'
 ]
 
 gulp.task 'serve', ->
@@ -82,7 +81,7 @@ gulp.task 'watch', ->
   gulp.watch styles, [ 'styles' ]
   gulp.watch fonts, [ 'fonts' ]
   gulp.watch docs, [ 'docs' ]
-  gulp.watch [ 'dist/css/app-gui.min.css', 'docs/*.html', 'docs/**/*.html' ], [ 'reload' ]
+  gulp.watch [ "dist/css/#{ process.env.PALETTE }.min.css", 'docs/*.html' ], [ 'reload' ]
 
 gulp.task 'compile', [
   'styles'
